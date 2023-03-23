@@ -10,6 +10,9 @@ const DeleteSpecialChars = (str) => {
 };
 
 const DeleteUnities = (str) => {
+  if (str === "N.D") {
+    str = "0";
+  }
   let outStr = str.replace(/[^0-9,.]/g, "");
   outStr = outStr.replace(/[","]/g, ".");
 
