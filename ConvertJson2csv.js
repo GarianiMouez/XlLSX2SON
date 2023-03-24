@@ -9,6 +9,6 @@ console.log(data);
 const csv = parse(data);
 
 console.log(csv);
-fs.writeFileSync("TEST.csv", csv, (err) => {
+fs.writeFileSync("TEST2.csv", csv, (err) => {
   if (err) console.log(err);
 });

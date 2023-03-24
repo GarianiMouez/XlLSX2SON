@@ -6,11 +6,13 @@ const {
 const OneLevelKeys = (SheetPath) => {
   var object = {};
 
-  object[DeleteSpecialChars(DeleteLastChar(SheetPath["C2"].w))] =
-    SheetPath["D2"].w;
+  object[
+    DeleteSpecialChars(
+      DeleteLastChar(SheetPath["C2"].w) + " " + SheetPath["B5"].w
+    )
+  ] = SheetPath["D2"].w + "   " + SheetPath["B7"].w;
   object[DeleteSpecialChars(DeleteLastChar(SheetPath["H2"].w))] =
     SheetPath["I2"].w;
-  object[DeleteSpecialChars(SheetPath["B5"].w)] = SheetPath["B7"].w;
 
   /////////////////// Digesteur 1//////////////////
   if (SheetPath["C7"] == undefined) {
